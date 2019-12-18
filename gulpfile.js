@@ -1,7 +1,7 @@
 
 
 var gulp = require("gulp");
-var less = require("gulp-less");
+var sass = require('gulp-sass');
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
@@ -15,7 +15,6 @@ var webp = require("gulp-webp");
 var imagemin = require("gulp-imagemin");
 var imageminSvgo = require("imagemin-svgo");
 var sequence = require("run-sequence");
-var smartgrid = require("smart-grid");
 
 var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
@@ -37,61 +36,19 @@ var path = {
     src: { //Пути откуда брать исходники
         html: '*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'js/main.js',//В стилях и скриптах нам понадобятся только main файлы
-        style: 'less/style.less',
+        style: 'scss/style.scss',
         img: 'img/**/*.{png,jpg,svg}', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'fonts/**/*.*'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: '**/*.html',
         js: 'js/**/*.js',
-        style: 'less/**/*.less',
+        style: 'scss/**/*.scss',
         img: 'img/**/*.*',
         fonts: 'fonts/**/*.*'
     },
     clean: './build'
 };
-
-//Const for Smart-Grid
-const smartgridSettings = {
-  outputStyle: 'less', /* less || scss || sass || styl */
-  columns: 12, // number of grid columns
-  offset: '40px', /* gutter width px || % || rem */
-  filename: '_smart-grid',
-  mobileFirst: true, /* mobileFirst ? 'min-width' : 'max-width' */
-  container: {
-    maxWidth: '1190px', // max-width оn very large screen
-    fields: '18px' // side fields
-  },
-  breakPoints: {
-    lg: {
-      'width': '1440px',
-      'fields': '15px'
-    },
-    sm: {
-      'width': '768px',
-      'fields': '73px',
-      'offset': '44px'
-    },
-    xs: {
-      'width': '320px',
-      'fields': '32px'
-    }
-  }
-};
-gulp.task('smartgrid', () => smartgrid('less', smartgridSettings));
-//^^^^^^^^^^^^^^^^^^^^
-gulp.task("serve", ["style"], function(){
-	browserSync.init({
-		server: ".",
-		notify: false,
-		open: true,
-		cors: true,
-		ui: false
-	});
-	gulp.watch("less/**/*.less", ["style"]);
-	gulp.watch("less/blocks/*.less", ["style"]);
-	gulp.watch("*.html").on("change", reload)
-});
 
 gulp.task("images", function(){
 	return gulp.src("img/**/*.{png,jpg,svg}")
@@ -122,9 +79,9 @@ gulp.task("svg", function(){
 
 
 gulp.task("style", function(){
-	return gulp.src("less/style.less")
+	return gulp.src(path.src.style)
 		.pipe(plumber())
-		.pipe(less())
+		.pipe(sass().on('error', sass.logError))
 		.pipe(postcss([autoprefixer({grid: true})]))
 		.pipe(csso())
 		.pipe(gulp.dest("css"))
@@ -195,5 +152,18 @@ gulp.task('build', [
 	'image:build',
 	'webp:build'
 ]);
+
+gulp.task("serve", ["style"], function(){
+	browserSync.init({
+		server: ".",
+		notify: false,
+		open: true,
+		cors: true,
+		ui: false
+	});
+	gulp.watch(path.watch.style, ["style"]);
+
+	gulp.watch(path.watch.html).on("change", reload);
+});
 
 gulp.task('default', ['serve']);
