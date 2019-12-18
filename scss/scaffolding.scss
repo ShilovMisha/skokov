@@ -1,0 +1,46 @@
+//Глобальные стили
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $defaul-font;
+	font-size: $defaul-font-size;
+	line-height: $default-line;
+	box-sizing: inherit;
+	letter-spacing: 0;
+}
+.hide-overflow{
+	overflow-x: hidden;
+	position: relative;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+picture {
+	display: block;
+}
+
+.js noscript {
+	display: none;
+}
+.no-js img:not([src]) {
+	display: none;
+}
+//for Safari
+textarea,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="button"],
+input[type="submit"]  {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
