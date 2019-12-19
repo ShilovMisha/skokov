@@ -1,0 +1,38 @@
+.offer {
+    padding-top: 154px;
+    width: 60%;
+    // background-color: $color-background;
+    color: $color-white;
+    position: relative;
+    // margin-bottom: 300px;
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     width: 200vw;
+    //     height: 100%;
+    //     top: 0;
+    //     background-color: $color-background;
+    //     z-index: -1;
+    //     transform: translate(-50%);
+    // }
+
+    p {
+        font-size: $default-font-size * 1.43;
+        line-height: $default-line * 1.17;
+        width: 80%;
+        &:last-of-type {
+            margin-bottom: 38px;
+        }
+    }
+}
+.offer__title {
+    font-size: $default-font-size * 4.29;
+    line-height: $default-line * 3.08;
+    margin: 0;
+    margin-bottom: 27px;
+}
+.offer__link-container {
+    // display: flex;
+    // justify-content: space-between;
+    margin-left: -14px;
+}

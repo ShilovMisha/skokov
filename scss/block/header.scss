@@ -1,14 +1,51 @@
-.header {
-    background-color: $color-background;
+.header__container {
+    padding-bottom: 300px;
     position: relative;
     &:before {
         content: '';
         position: absolute;
-        width: 200vw;
+        width: 100vw;
         height: 100%;
+        left: 50%;
         background-color: $color-background;
+        background-image:  
+                            linear-gradient(to right, $color-overlay, $color-overlay), 
+                            url(../img/desktop-bg-01.jpg);
+        background-repeat: no-repeat;
+        background-position: center,center;
+        background-size: auto, auto;
         z-index: -1;
         transform: translate(-50%);
+    }
+}
+.header__chart {
+    position: absolute;
+    bottom: -1px;
+    width: 100vw;
+    height: 600px;
+    height: 40vw;
+    background-image: url(../img/desktop-chart.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    left: 50%;
+    transform: translate(-50%);
+}
+.header__marker {
+    background-color: $color-pink;
+    padding: 5px 10px;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    border-radius: 3px;
+    &:after {
+        content: "";
+        position: absolute;
+        border: 10px solid transparent;
+        border-left-color: $color-pink;
+        right: -18px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 .header__nav {
@@ -29,7 +66,7 @@
     display: flex;
     flex-wrap: wrap;
     li:last-child .header__nav-item{
-        padding-right: 0;
+        margin-right: 0;
     }
 }
 .header__nav-item {
@@ -54,18 +91,24 @@
         transform: translate(-50%)
     }
 }
-.header__nav-item:hover {
+.header__nav-item {
     position: relative;
     &:before {
         content: "";
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 0;
+        height: 0.5em;
 
         bottom: 0;
         left: 50%;
-        transform: translate(-50%);
-        background-image: repeating-radial-gradient(closest-corner, $color-background, $color-background 1px, transparent 1px, transparent 100%);
+        top: 30%;
+        transform: translateX(-50%);
+        background-image: repeating-radial-gradient(closest-corner, $color-dark, $color-dark 2px, transparent 2px, transparent 100%);
         background-size: 4px 4px;
+        opacity: 0.6;
+        transition: width 0.3s;
     }
+}
+.header__nav-item:hover:before {
+    width: 130%;
 }

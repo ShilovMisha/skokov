@@ -1,0 +1,16 @@
+@mixin pseudo-after {
+    position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            @content;
+        }
+}
+@mixin pseudo-before {
+    position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            @content;
+        }
+}

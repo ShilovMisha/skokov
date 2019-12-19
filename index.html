@@ -12,7 +12,8 @@
 <body>
 	<div class="hide-overflow">
 		<div class="wrapper">
-			<header class="header">
+			<div class="header__container">
+				<header class="header">
 				<nav class="header__nav">
 					<a href="#" class="header__logo">Skokov</a>
 					<ul class="header__nav-list">
@@ -40,9 +41,16 @@
 				</h1>
 				<p>Growth doesn't always go the way you expect. Our 
 					strategy consultants can help you climb.</p>
-				<a href="#" class="btn btn__main">Get started</a>
-				<a href="#" class="btn btn__secondary">Learn more</a>
+				<div class="offer__link-container">
+					<a href="#" class="btn btn__main">Get started</a>
+					<a href="#" class="btn btn__secondary">Learn more</a>
+				</div>
 			</section>
+			<div class="header__chart">
+				<span class="header__marker" role="presentation" aria-hidden="true">Your profit</span>
+			</div>
+			</div>
+			
 			<section class="services">
 				<h2 class="services__title">
 					Our services
@@ -53,52 +61,76 @@
 				</p>
 				<ul class="services__list">
 					<li>
-						<h3>Performance 
+						<div class="services__icon-wrapper">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-01.png" alt="">
+						</div>
+						<h3>Performance <br> 
 							Improvement</h3>
 						<p>Enabling companies to grow 
 							revenue, improve margins and 
 							reposition quickly.</p>
 					</li>
 					<li>
-						<h3>Customer 
+						<div class="services__icon-wrapper">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-02.png" alt="">
+						</div>
+						<h3>Customer <br>
 							Strategy & Marketing</h3>
 						<p>In-depth customer insights 
 							combined with economic and 
 							operational fundamentals</p>
 					</li>
 					<li>
-						<h3>Information 
+						<div class="services__icon-wrapper">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-03.png" alt="">
+						</div>
+						<h3>Information <br>
 							Technology</h3>
 						<p>Realizing the full potential 
 							of IT resources, investments 
 							and assets</p>
 					</li>
 					<li>
-						<h3>Full Potential 
+						<div class="services__icon-wrapper">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-04.png" alt="">
+						</div>
+						<h3>Full Potential <br>
 							Transformation</h3>
 						<p>A cross-functional effort to alter 
 							the financial, operational and 
 							strategic trajectory of a business</p>
 					</li>
 					<li>
+						<div class="services__icon-wrapper">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-05.png" alt="">
+						</div>
 						<h3>Strategy</h3>
 						<p>Tailored solutions that deliver 
 							results and achieve sustained 
 							growth</p>
 					</li>
 					<li>
+						<div class="services__icon-wrapper">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-06.png" alt="">
+						</div>
 						<h3>Private Equity</h3>
 						<p>Advising investors across 
 							the entire investment life 
 							cycle</p>
 					</li>
 					<li>
+						<div class="services__icon-wrapper">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-07.png" alt="">
+						</div>
 						<h3>Digital</h3>
 						<p>Deliver on core strategy, 
 							delight customers and operate 
 							smarter and faster</p>
 					</li>
 					<li>
+						<div class="services__icon-wrapper">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-08.png" alt="">
+						</div>
 						<h3>Results Delivery</h3>
 						<p>
 							Predicting, measuring and 
@@ -109,6 +141,11 @@
 				</ul>
 			</section>
 			<div class="gap-block">
+				<div class="gap-block_bg-02">
+					<div class="gap-block__overlay"></div>
+					<img aria-hidden="true" role="presentation" src="img/desktop-bg-02.jpg" alt="">
+					
+				</div>
 				<p>
 					<b>Contact us for a FREE, NO OBLIGATION confidential 
 					exploration of your needs</b>
@@ -116,7 +153,7 @@
 				<a href="#" class="btn btn__main">Contact Us</a>
 			</div>
 			<section class="about-us">
-				<h2>About Us</h2>
+				<h2 class="about-us__title">About Us</h2>
 				<p>
 					SKOKOV is one of the world's leading management consulting firms. We care for our clients' business as our 
 					own, they know we're in this together
@@ -149,22 +186,22 @@
 							<ul>
 								<li>
 									<a href="#" title="Oracle">
-										<img src="" alt="Oracle"></a></li>
+										<img src="img/logo-oracle.jpg" alt="Oracle"></a></li>
 								<li>
 									<a href="#" title="Sony">
-										<img src="" alt="Sony"></a></li>
+										<img src="img/logo-sony.jpg" alt="Sony"></a></li>
 								<li>
 									<a href="#" title="SanDisk">
-										<img src="" alt="SanDisk"></a></li>
+										<img src="img/logo-sandisk.jpg" alt="SanDisk"></a></li>
 								<li>
 									<a href="#" title="McAfee">
-										<img src="" alt="McAfee"></a></li>
+										<img src="img/logo-mcafee.jpg" alt="McAfee"></a></li>
 								<li>
 									<a href="#" title="Netflix">
-										<img src="" alt="Netflix"></a></li>
+										<img src="img/logo-netflix.jpg" alt="Netflix"></a></li>
 								<li>
 									<a href="#" title="SAP">
-										<img src="" alt="SAP"></a></li>
+										<img src="img/logo-sap.jpg" alt="SAP"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -172,7 +209,7 @@
 						<h3>Our team</h3>
 						<ul class="our-team__list">
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
 										<h4>Item name</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
@@ -182,9 +219,9 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
-										<h4>Item name</h4>
+										<h4>Clack Kent</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
@@ -192,7 +229,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
 										<h4>Item name</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
@@ -202,7 +239,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
 										<h4>Item name</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
@@ -212,7 +249,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
 										<h4>Item name</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
@@ -222,7 +259,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
 										<h4>Item name</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
@@ -232,7 +269,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
 										<h4>Item name</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
@@ -242,7 +279,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
 										<h4>Item name</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
@@ -252,7 +289,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
 										<h4>Item name</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
@@ -262,7 +299,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
 										<h4>Item name</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
@@ -272,7 +309,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
 										<h4>Item name</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
@@ -282,7 +319,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="our-team__link">
 									<div class="our-team__item-container">
 										<h4>Item name</h4>
 										<p class="our-team__item-function">Bad Debt Manager</p>
@@ -295,7 +332,8 @@
 					</div>
 				</div>
 			</section>
-			<div class="gap-block">
+			<div class="gap-block gap-block__play">
+
 				<h2>we blend the strategic with creative</h2>
 				<p><b>When someone asks what we do at SKOKOV, it’s tempting to point out our four-decade track record for helping to transform 
 					the world’s great companies into sharper, smarter, better versions of themselves. </b></p>
