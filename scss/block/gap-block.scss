@@ -13,32 +13,24 @@
         line-height: 1.7em;
         text-transform: uppercase;
     }
+   
 }
-
-.gap-block_bg-02 {
-    background-color: $color-dark;
-    position: absolute;
-    top: 0;
-    width: 1600px;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    img {
-        display: block;
-        position: relative;
-        z-index: -1;
+.gap-block__play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 85px 0 62px;
+     h2 {
+        font-size: 2.43em;
+        text-transform: uppercase;
+        margin-top: 32px;
+        margin-bottom: 25px;
     }
-}
-.gap-block__overlay {
-        position: absolute;
-        content: "";
-        width: 100vw;
-        height: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-        background-image: linear-gradient(to right, $color-overlay, $color-overlay), repeating-radial-gradient(closest-corner, $color-overlay, $color-overlay 1px, transparent 1px, transparent 100%);
-        background-size: 100% , 3px 3px;
-        
+    p {
+        font-size: 1.14em;
+        width: 90%;
+    }
+    a {
+        order: -1;
+    }
 }
