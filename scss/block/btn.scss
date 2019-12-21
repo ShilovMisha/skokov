@@ -9,12 +9,19 @@
     background-color: red;
     border-radius: 1.5em;
     border: none;
+    @extend .hvr-ripple-out;
+    &:before {
+        border-color: inherit;
+        border-radius: inherit;
+    }
 }
 .btn__main {
     background-color: $color-pink;
+    border-color: $color-pink;
 }
 .btn__secondary {
     background-color: $color-dark;
+    border-color: $color-dark;
 }
 .btn__play {
     border-radius: 50%;

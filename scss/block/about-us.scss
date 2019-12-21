@@ -79,6 +79,7 @@
     li {
         width: (100%/6);
         position: relative;
+        overflow: hidden;
         img {
             position: absolute;
             top: 0;
@@ -91,6 +92,9 @@
     background-color: $color-pink;
     padding: 9px 19px 16px;
     opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(.52,1.64,.37,.66);
+ 
     h4 {
         margin: 0;
         font-size: 2.29em;
@@ -107,6 +111,8 @@
 .our-team__link:hover {
     .our-team__item-container {
         opacity: 1;
+        transform: translateY(0);
+        
     }
 }
 .our-team__item-function {
