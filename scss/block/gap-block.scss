@@ -34,3 +34,21 @@
         order: -1;
     }
 }
+@media (max-width: $desktop-width) {
+    .gap-block {
+        padding: 65px 0;
+    }
+    .gap-block b, .gap-block__play h2 {
+        font-size: 1.73em;
+        line-height: 1.5em;
+    }
+}
+@media (max-width: $tablet-width) {
+    .gap-block p {
+        max-width: 570px;
+        margin: 0 auto 22px;
+    }
+    .gap-block b, .gap-block__play h2 {
+        font-size: 1.13em;
+    }
+}

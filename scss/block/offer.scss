@@ -32,8 +32,34 @@
     margin-bottom: 27px;
 }
 .offer__link-container {
-    // display: flex;
-    // justify-content: space-between;
     margin-left: -14px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+@media (max-width: $desktop-width) {
+    .offer {
+        width: 90%;
+        padding-top: 120px;
+    }
+    .offer__title {
+        font-size: 5.2vw;
+        line-height: 1.3em;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .offer {
+        width: 100%;
+        max-width: 400px;
+        padding-top: 74px;
+    }
+    .offer__title {
+        font-size: 23.4px;
+        margin: 0 0 16px;
+    }
+    .offer p {
+        font-size: 14px;
+        width: 100%;
+    }
+}

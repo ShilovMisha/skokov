@@ -14,3 +14,10 @@
 // 		width: 93.85%;
 // 	}
 // }
+
+
+@media (max-width: $tablet-width) {
+	.wrapper {
+		padding: 0 30px;
+	}
+}

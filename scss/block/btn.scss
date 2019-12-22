@@ -1,12 +1,13 @@
 .btn {
     display: inline-block;
     vertical-align: middle;
+    text-align: center;
     color: $color-white;
     font-size: 1.43em;
     font-weight: normal;
     padding: 1em 2.5em;
-    margin: 5px 14px;
-    background-color: red;
+    margin: 5px 0.8em;
+    background-color: $color-pink;
     border-radius: 1.5em;
     border: none;
     @extend .hvr-ripple-out;
@@ -40,4 +41,33 @@
     font-size: 1.23em;
     padding: 0.6em 2.5em;
     
+}
+.btn__burger {
+    padding: 1em 1.9em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/icon-menu.svg');
+    &:before {
+        display: none;
+    }
+}
+.btn__burger--close {
+    background-image: url('../img/icon-menu-close.svg');
+}
+
+@media (max-width: $desktop-width) { 
+    .btn {
+        font-size: 1.13em;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .btn__main, .btn__secondary {
+        // width: 100%;
+        flex-grow: 1;
+         padding: 0.8em 2.5em;
+    }
+    .btn {
+       
+    }
 }

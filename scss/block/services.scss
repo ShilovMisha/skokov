@@ -57,3 +57,32 @@
     left: 50%;
     transform: translateX(-50%);
 }
+@media (max-width: $desktop-width) {
+    .services__list {
+        li {
+            width: 32.6%;
+            flex-grow: 1;
+        }
+    }
+}
+
+@media (max-width: $desktop-width) {
+    .services__title {
+        font-size: 1.67em;
+    }
+    .services>p {
+        font-size: 1em;
+        width: 90%;
+    }
+    .services__list {
+        li {
+            width: 240px;
+        }
+    }
+    .services__list {
+        margin-top: 38px;
+    }
+    .services__list li {
+        padding: 66px 0 30px;
+    }
+}
