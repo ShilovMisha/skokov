@@ -1,5 +1,5 @@
 .bg-layer {
-    background-color: $color-dark;
+    // background-color: $color-dark;
     position: absolute;
     top: 0;
     width: 1600px;
@@ -31,4 +31,15 @@
 .bg-layer__wrapper {
     height: 100%;
     overflow: hidden;
+    
+    
+    position: relative;
+    img {
+        height: 100%;
+        width: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }

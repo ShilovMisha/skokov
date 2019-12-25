@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="no-jss">
+<html lang="ru" class="no-js webp">
 <head>
 	<meta charset="UTF-8">
 	<title>Skokov</title>
@@ -7,7 +7,6 @@
 	<link rel="preload" href="css/style.css" as="style">
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 <body>
 	<div class="hide-overflow">
@@ -36,7 +35,7 @@
 							<a href="#" class="hvr-grow header__nav-item">News</a>
 						</li>
 						<li>
-							<a href="#" class="hvr-grow header__nav-item">Contact</a>
+							<a href="#contacts" class="hvr-grow header__nav-item">Contact</a>
 						</li>
 					</ul>
 				</nav>
@@ -68,7 +67,9 @@
 				<ul class="services__list">
 					<li>
 						<div class="services__icon-wrapper">
-							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-01.png" alt="">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-01.png"
+							srcset="img/our-service-01@2x.png 2x"
+							alt="">
 						</div>
 						<h3>Performance <br> 
 							Improvement</h3>
@@ -78,7 +79,9 @@
 					</li>
 					<li>
 						<div class="services__icon-wrapper">
-							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-02.png" alt="">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-02.png"
+							srcset="img/our-service-02@2x.png 2x"
+							alt="">
 						</div>
 						<h3>Customer <br>
 							Strategy & Marketing</h3>
@@ -88,7 +91,9 @@
 					</li>
 					<li>
 						<div class="services__icon-wrapper">
-							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-03.png" alt="">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-03.png"
+							srcset="img/our-service-03@2x.png 2x"
+							alt="">
 						</div>
 						<h3>Information <br>
 							Technology</h3>
@@ -98,7 +103,9 @@
 					</li>
 					<li>
 						<div class="services__icon-wrapper">
-							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-04.png" alt="">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-04.png"
+							srcset="img/our-service-04@2x.png 2x"
+							alt="">
 						</div>
 						<h3>Full Potential <br>
 							Transformation</h3>
@@ -108,7 +115,9 @@
 					</li>
 					<li>
 						<div class="services__icon-wrapper">
-							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-05.png" alt="">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-05.png"
+							srcset="img/our-service-05@2x.png 2x"
+							alt="">
 						</div>
 						<h3>Strategy</h3>
 						<p>Tailored solutions that deliver 
@@ -117,7 +126,9 @@
 					</li>
 					<li>
 						<div class="services__icon-wrapper">
-							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-06.png" alt="">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-06.png"
+							srcset="img/our-service-06@2x.png 2x"
+							alt="">
 						</div>
 						<h3>Private Equity</h3>
 						<p>Advising investors across 
@@ -126,7 +137,9 @@
 					</li>
 					<li>
 						<div class="services__icon-wrapper">
-							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-07.png" alt="">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-07.png"
+							srcset="img/our-service-07@2x.png 2x"
+							alt="">
 						</div>
 						<h3>Digital</h3>
 						<p>Deliver on core strategy, 
@@ -135,7 +148,9 @@
 					</li>
 					<li>
 						<div class="services__icon-wrapper">
-							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-08.png" alt="">
+							<img role="presentation" aria-hidden="true" width="55" height="55" src="img/our-service-08.png"
+							srcset="img/our-service-08@2x.png 2x"
+							alt="">
 						</div>
 						<h3>Results Delivery</h3>
 						<p>
@@ -150,7 +165,17 @@
 				<div class="bg-layer">
 					<div class="bg-layer__overlay"></div>
 					<div class="bg-layer__wrapper">
-						<img aria-hidden="true" role="presentation" src="img/desktop-bg-02.jpg" alt="">
+						<noscript>	
+							<picture>
+								<source type="image/webp" media="(min-width: 768px)" srcset="img/desktop-bg-02.webp">
+								<source type="image/jpeg" media="(min-width: 768px)" srcset="img/desktop-bg-02.jpg">
+
+								<source type="image/webp" media="(max-width: 767px)" srcset="img/desktop-bg-02@small.webp">
+						
+								<img aria-hidden="true" role="presentation" src="img/desktop-bg-02@small.jpg" alt="">
+							</picture>
+						</noscript>
+						
 					</div>
 				</div>
 				<p>
@@ -193,26 +218,118 @@
 							<ul>
 								<li>
 									<a href="#" title="Oracle" class="hvr-shrink">
-										<img src="img/logo-oracle.jpg" alt="Oracle"></a></li>
-								<li>
+										<noscript>	
+											<picture>
+												<source type="image/webp"  srcset="img/logo-oracle.webp, img/logo-oracle@2x.webp 2x">
+												<img src="img/logo-oracle.jpg" srcset="img/logo-oracle@2x.jpg 2x" alt="Oracle">
+											</picture>
+										</noscript>
+
+										</a>
 									<a href="#" title="Sony" class="hvr-shrink">
-										<img src="img/logo-sony.jpg" alt="Sony"></a></li>
+										<noscript>	
+											<picture>
+												<source type="image/webp"  srcset="img/logo-sony.webp, img/logo-sony@2x.webp 2x">
+												<img src="img/logo-sony.jpg" srcset="img/logo-sony@2x.jpg 2x" alt="Sony">
+											</picture>
+										</noscript>
+										</a>
+									</li>
 								<li>
 									<a href="#" title="SanDisk" class="hvr-shrink">
-										<img src="img/logo-sandisk.jpg" alt="SanDisk"></a></li>
-								<li>
-									<a href="#" title="McAfee" class="hvr-shrink">
-										<img src="img/logo-mcafee.jpg" alt="McAfee"></a></li>
+										<noscript>	
+											<picture>
+												<source type="image/webp"  srcset="img/logo-sandisk.webp, img/logo-sandisk@2x.webp 2x">
+												<img src="img/logo-sandisk.jpg" srcset="img/logo-sandisk@2x.jpg 2x" alt="SanDisk">
+											</picture>
+										</noscript>
+										</a>
+										<a href="#" title="McAfee" class="hvr-shrink">
+											<noscript>	
+												<picture>
+													<source type="image/webp"  srcset="img/logo-mcafee.webp, img/logo-mcafee@2x.webp 2x">
+														<img src="img/logo-mcafee.jpg" srcset="img/logo-mcafee@2x.jpg 2x" alt="McAfee">
+												</picture>
+											</noscript>
+										</a>
+									</li>
 								<li>
 									<a href="#" title="Netflix" class="hvr-shrink">
-										<img src="img/logo-netflix.jpg" alt="Netflix"></a></li>
-								<li>
+										<noscript>	
+											<picture>
+												<source type="image/webp"  srcset="img/logo-netflix.webp, img/logo-netflix@2x.webp 2x">
+													<img src="img/logo-netflix.jpg" srcset="img/logo-netflix@2x.jpg 2x" alt="Netflix">
+											</picture>
+										</noscript>
+										</a>
 									<a href="#" title="SAP" class="hvr-shrink">
-										<img src="img/logo-sap.jpg" alt="SAP"></a></li>
+										<noscript>	
+											<picture>
+												<source type="image/webp"  srcset="img/logo-sap.webp, img/logo-sap@2x.webp 2x">
+												<img src="img/logo-sap.jpg" srcset="img/logo-sap@2x.jpg 2x" alt="SAP">
+											</picture>
+										</noscript>
+									</a>
+									</li>
+									<li>
+										<a href="#" title="Oracle" class="hvr-shrink">
+											<noscript>	
+												<picture>
+													<source type="image/webp"  srcset="img/logo-oracle.webp, img/logo-oracle@2x.webp 2x">
+													<img src="img/logo-oracle.jpg" srcset="img/logo-oracle@2x.jpg 2x" alt="Oracle">
+												</picture>
+											</noscript>
+	
+											</a>
+										<a href="#" title="Sony" class="hvr-shrink">
+											<noscript>	
+												<picture>
+													<source type="image/webp"  srcset="img/logo-sony.webp, img/logo-sony@2x.webp 2x">
+													<img src="img/logo-sony.jpg" srcset="img/logo-sony@2x.jpg 2x" alt="Sony">
+												</picture>
+											</noscript>
+											</a>
+										</li>
+									<li>
+										<a href="#" title="SanDisk" class="hvr-shrink">
+											<noscript>	
+												<picture>
+													<source type="image/webp"  srcset="img/logo-sandisk.webp, img/logo-sandisk@2x.webp 2x">
+													<img src="img/logo-sandisk.jpg" srcset="img/logo-sandisk@2x.jpg 2x" alt="SanDisk">
+												</picture>
+											</noscript>
+											</a>
+											<a href="#" title="McAfee" class="hvr-shrink">
+												<noscript>	
+													<picture>
+														<source type="image/webp"  srcset="img/logo-mcafee.webp, img/logo-mcafee@2x.webp 2x">
+															<img src="img/logo-mcafee.jpg" srcset="img/logo-mcafee@2x.jpg 2x" alt="McAfee">
+													</picture>
+												</noscript>
+											</a>
+										</li>
+									<li>
+										<a href="#" title="Netflix" class="hvr-shrink">
+											<noscript>	
+												<picture>
+													<source type="image/webp"  srcset="img/logo-netflix.webp, img/logo-netflix@2x.webp 2x">
+														<img src="img/logo-netflix.jpg" srcset="img/logo-netflix@2x.jpg 2x" alt="Netflix">
+												</picture>
+											</noscript>
+											</a>
+										<a href="#" title="SAP" class="hvr-shrink">
+											<noscript>	
+												<picture>
+													<source type="image/webp"  srcset="img/logo-sap.webp, img/logo-sap@2x.webp 2x">
+													<img src="img/logo-sap.jpg" srcset="img/logo-sap@2x.jpg 2x" alt="SAP">
+												</picture>
+											</noscript>
+										</a>
+										</li>
 							</ul>
 						</div>
 					</div>
-					<div class="about-us__out-team">
+					<div class="about-us__our-team">
 						<h3>Our team</h3>
 						<ul class="our-team__list">
 							<li>
@@ -222,7 +339,13 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-01.jpg" alt="Our team">
+									
+										<noscript>	
+											<picture>
+												<source type="image/webp"  srcset="img/our-team-01.webp, img/our-team-01@2x.webp 2x">
+												<img src="img/our-team-01.jpg" srcset="img/our-team-01@2x.jpg 2x" alt="Our team">
+											</picture>
+										</noscript>
 								</a>
 							</li>
 							<li>
@@ -232,7 +355,13 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-02.jpg" alt="Our team">
+									<noscript>	
+										<picture>
+											<source type="image/webp"  srcset="img/our-team-02.webp, img/our-team-02@2x.webp 2x">
+											<img src="img/our-team-02.jpg" srcset="img/our-team-02@2x.jpg 2x" alt="Our team">
+										</picture>
+									</noscript>
+										
 								</a>
 							</li>
 							<li>
@@ -242,7 +371,13 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-03.jpg" alt="Our team">
+									<noscript>	
+										<picture>
+											<source type="image/webp"  srcset="img/our-team-03.webp, img/our-team-03@2x.webp 2x">
+											<img src="img/our-team-03.jpg" srcset="img/our-team-03@2x.jpg 2x" alt="Our team">
+										</picture>
+									</noscript>
+										
 								</a>
 							</li>
 							<li>
@@ -252,7 +387,13 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-04.jpg" alt="Our team">
+									<noscript>	
+										<picture>
+											<source type="image/webp"  srcset="img/our-team-04.webp, img/our-team-04@2x.webp 2x">
+											<img src="img/our-team-04.jpg" srcset="img/our-team-04@2x.jpg 2x" alt="Our team">
+										</picture>
+									</noscript>
+										
 								</a>
 							</li>
 							<li>
@@ -262,7 +403,13 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-05.jpg" alt="Our team">
+									<noscript>	
+										<picture>
+											<source type="image/webp"  srcset="img/our-team-05.webp, img/our-team-05@2x.webp 2x">
+											<img src="img/our-team-05.jpg" srcset="img/our-team-05@2x.jpg 2x" alt="Our team">
+										</picture>
+									</noscript>
+										
 								</a>
 							</li>
 							<li>
@@ -272,7 +419,13 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-06.jpg" alt="Our team">
+									<noscript>	
+										<picture>
+											<source type="image/webp"  srcset="img/our-team-06.webp, img/our-team-06@2x.webp 2x">
+											<img src="img/our-team-06.jpg" srcset="img/our-team-06@2x.jpg 2x" alt="Our team">
+										</picture>
+									</noscript>
+										
 								</a>
 							</li>
 							<li>
@@ -282,7 +435,13 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-07.jpg" alt="Our team">
+									<noscript>	
+										<picture>
+											<source type="image/webp"  srcset="img/our-team-07.webp, img/our-team-07@2x.webp 2x">
+											<img src="img/our-team-07.jpg" srcset="img/our-team-07@2x.jpg 2x" alt="Our team">
+										</picture>
+									</noscript>
+
 								</a>
 							</li>
 							<li>
@@ -292,7 +451,12 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-08.jpg" alt="Our team">
+									<noscript>	
+										<picture>
+											<source type="image/webp"  srcset="img/our-team-08.webp, img/our-team-08@2x.webp 2x">
+											<img src="img/our-team-08.jpg" srcset="img/our-team-08@2x.jpg 2x" alt="Our team">
+										</picture>
+									</noscript>
 								</a>
 							</li>
 							<li>
@@ -302,7 +466,12 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-09.jpg" alt="Our team">
+									<noscript>	
+										<picture>
+											<source type="image/webp"  srcset="img/our-team-09.webp, img/our-team-09@2x.webp 2x">
+											<img src="img/our-team-09.jpg" srcset="img/our-team-09@2x.jpg 2x" alt="Our team">
+										</picture>
+									</noscript>
 								</a>
 							</li>
 							<li>
@@ -312,7 +481,12 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-10.jpg" alt="Our team">
+									<noscript>	
+										<picture>
+											<source type="image/webp"  srcset="img/our-team-10.webp, img/our-team-10@2x.webp 2x">
+											<img src="img/our-team-10.jpg" srcset="img/our-team-10@2x.jpg 2x" alt="Our team">
+										</picture>
+									</noscript>
 								</a>
 							</li>
 							<li>
@@ -322,7 +496,12 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-11.jpg" alt="Our team">
+									<noscript>	
+										<picture>
+											<source type="image/webp"  srcset="img/our-team-11.webp, img/our-team-11@2x.webp 2x">
+											<img src="img/our-team-11.jpg" srcset="img/our-team-11@2x.jpg 2x" alt="Our team">
+										</picture>
+									</noscript>
 								</a>
 							</li>
 							<li>
@@ -332,7 +511,12 @@
 										<p class="our-team__item-function">Bad Debt Manager</p>
 										<p class="our-team__item-position">Team Leader</p>
 									</div>
-										<img src="img/our-team-12.jpg" alt="Our team">
+									<noscript>	
+										<picture>
+											<source type="image/webp"  srcset="img/our-team-12.webp, img/our-team-12@2x.webp 2x">
+											<img src="img/our-team-12.jpg" srcset="img/our-team-12@2x.jpg 2x" alt="Our team">
+										</picture>
+									</noscript>
 								</a>
 							</li>
 						</ul>
@@ -343,7 +527,17 @@
 				<div class="bg-layer">
 					<div class="bg-layer__overlay"></div>
 					<div class="bg-layer__wrapper">
-						<img aria-hidden="true" role="presentation" src="img/desktop-bg-03.jpg" alt="">
+						<noscript>	
+							<picture>
+								<source type="image/webp" media="(min-width: 768px)" srcset="img/desktop-bg-03.webp">
+								<source type="image/jpeg" media="(min-width: 768px)" srcset="img/desktop-bg-03.jpg">
+
+								<source type="image/webp" media="(max-width: 767px)" srcset="img/desktop-bg-03@small.webp">
+						
+								<img aria-hidden="true" role="presentation" src="img/desktop-bg-03@small.jpg" alt="">
+							</picture>
+						</noscript>
+						
 					</div>
 				</div>
 				<h2>we blend the strategic with creative</h2>
@@ -361,7 +555,19 @@
 					<li class="news__item">
 						<a href="#" class="hvr-shrink">
 							<div class="news__item-img-wrapper">
-								<img src="img/news-01.jpg" alt="news">
+								<noscript>	
+										<picture>
+										<source type="image/webp" media="(min-width: 768px)" srcset="img/news-01.webp,
+										img/news-01@2x.webp 2x">
+										<source type="image/jpeg" media="(min-width: 768px)" srcset="img/news-01.jpg,
+										img/news-01@2x.jpg 2x">
+			
+										<source type="image/webp" media="(max-width: 767px)" srcset="img/news-01@small.webp">
+										<img src="img/news-01@small.jpg" alt="news">
+									</picture>
+								</noscript>
+							
+							
 							</div>	
 							<div class="news__item-container">
 								<h3 class="news__item-title">
@@ -383,7 +589,19 @@
 					<li class="news__item">
 						<a href="#" class="hvr-shrink">
 							<div class="news__item-img-wrapper">
-								<img src="img/news-02.jpg" alt="news">
+								<noscript>
+									<picture>
+									<source type="image/webp" media="(min-width: 768px)" srcset="img/news-02.webp,
+									img/news-02@2x.webp 2x">
+									<source type="image/jpeg" media="(min-width: 768px)" srcset="img/news-02.jpg,
+									img/news-02@2x.jpg 2x">
+		
+									<source type="image/webp" media="(max-width: 767px)" srcset="img/news-02@small.webp">
+									<img src="img/news-02@small.jpg" alt="news">
+								</picture>
+								</noscript>
+								
+								
 							</div>
 							<div class="news__item-container">
 							<h3 class="news__item-title">
@@ -404,7 +622,19 @@
 					<li class="news__item">
 						<a href="#" class="hvr-shrink">
 							<div class="news__item-img-wrapper">
-								<img src="img/news-03.jpg" alt="news">
+								<noscript>
+									<picture>
+									<source type="image/webp" media="(min-width: 768px)" srcset="img/news-03.webp,
+									img/news-03@2x.webp 2x">
+									<source type="image/jpeg" media="(min-width: 768px)" srcset="img/news-03.jpg,
+									img/news-03@2x.jpg 2x">
+		
+									<source type="image/webp" media="(max-width: 767px)" srcset="img/news-03@small.webp">
+									<img src="img/news-03@small.jpg" alt="news">
+								</picture>
+								</noscript>
+								
+								
 							</div>
 							<div class="news__item-container">
 							<h3 class="news__item-title">
@@ -423,11 +653,21 @@
 					</li>
 				</ul>
 			</section>
-			<section class="contacts">
+			<section class="contacts" id="contacts">
 				<div class="bg-layer bg-layer--no-dots">
 					<div class="bg-layer__overlay"></div>
 					<div class="bg-layer__wrapper">
-						<img aria-hidden="true" role="presentation" src="img/desktop-bg-04.jpg" alt="">
+						<noscript>	
+							<picture>
+								<source type="image/webp" media="(min-width: 768px)" srcset="img/desktop-bg-04.webp">
+								<source type="image/jpeg" media="(min-width: 768px)" srcset="img/desktop-bg-04.jpg">
+
+								<source type="image/webp" media="(max-width: 767px)" srcset="img/desktop-bg-04@small.webp">
+						
+								<img aria-hidden="true" role="presentation" src="img/desktop-bg-04@small.jpg" alt="">
+							</picture>
+						</noscript>
+						
 					</div>
 				</div>
 				<div class="contact-details">
@@ -460,16 +700,18 @@
 							Contact
 						</b>
 					</p>
-					<form action="#">
+					<form action="#" name="example_form" method="POST">
 						<fieldset>
 							<legend>Please contact us using contact form below.</legend>
-							<input type="text" placeholder="Name" name="skokov-name">
+							<input type="text" placeholder="Name" name="skokov-name" autocomplete>
 							<input type="email" placeholder="Email" name="skokov-email">
 							<input type="text" placeholder="Subject" name="skokov-subject">
 							<textarea placeholder="Message" name="skokov-message"></textarea>
 							<button type="submit" class="contact-form__submit btn btn__main btn__submit">Send</button>
 						</fieldset>
 					</form>
+					<div class="error_box"></div>
+					<div class="success_box">Спасибо! Мы обязательно свяжемся с вами.</div>
 				</div>
 			</section>
 			<footer class="footer">
@@ -493,6 +735,7 @@
 			</footer>
 		</div>
 	</div>
-<!-- <script src="js/modernizr-custom.js" async></script> -->
+
+	<script src="build/js/main.js" async></script>
 </body>
 </html>

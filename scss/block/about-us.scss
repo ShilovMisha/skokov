@@ -56,23 +56,29 @@
 }
 .about-us__our-clients-slider {
     padding-bottom: 26px;
+    overflow: hidden;
     ul {
         display: flex;
         flex-wrap: wrap;
         margin: -6px;
     }
     li {
-        width: 31.21%;
-        height: 31.21%;
+        // width: 31.21%;
+        // height: 31.21%;
+        width: 185px;
         margin: 3px;
+        a+a {
+            margin-top: 6px;
+        }
     }
     img {
         display: block;
     }
 }
 
-.about-us__out-team {
+.about-us__our-team {
     padding-top: 5px;
+    width: 100%;
 }
 .our-team__list {
     display: flex;
@@ -81,17 +87,20 @@
     padding-top: 10px;
     color: $color-white;
     li {
-        // width: (100%/6);
         width: 190px;
         min-height: 190px;
         position: relative;
         overflow: hidden;
+        picture {
+            min-width: 20px;
+        }
         img {
             position: absolute;
             top: 0;
             left: 0;
             z-index: -1;
             width: auto;
+            
             height: 100%;
         }
     }
@@ -141,19 +150,55 @@
 
 @media (max-width: $desktop-width) {
     .about-us__our-clients-slider li {
-        width: 34.21%;
-        height: 34.21%;
+        // width: 34.21%;
+        // height: 34.21%;
+         width: 145px;
     }
     .about-us__our-clients-slider ul {
         justify-content: center;
     }
     .our-team__list li {
-        width: 170px;
-        min-height: 170px;
+        width: 166px;
+        min-height: 166px;
     }
     .our-team__item-container h4 {
         font-size: 1.79em;
         line-height: 1.07em;
          width: 100%;
     }
+
+}
+
+@media (max-width: $tablet-width) {
+    .about-us__container {
+        padding-top: 30px;
+    }
+    .about-us__title {
+        font-size: 1.67em;
+    }
+    .about-us>p {
+        width: 90%;
+        font-size: 1em;
+    }
+    .about-us__what-we-do {
+        width: 100%;
+        &>p {
+            max-width: 530px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .about-us__our-clients {
+        width: 100%;
+        
+    }
+    .about-us__our-clients-slider {
+     max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-us__our-clients-slider li  {
+        width: 130px;
+    }
+   
 }

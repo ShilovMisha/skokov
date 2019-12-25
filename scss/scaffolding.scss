@@ -32,6 +32,8 @@ a {
 }
 picture {
 	display: block;
+	min-width: 1px;
+	min-height: 1px;
 }
 
 .js noscript {

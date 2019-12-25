@@ -4,6 +4,7 @@
     padding: 98px 0 92px;
     
     color: $color-white;
+    *:not(a):not(button) {@include text-stroke(black);}
     p {
         margin: 0;
         margin-bottom: 22px;
@@ -15,6 +16,7 @@
     }
    
 }
+
 .gap-block__play {
     display: flex;
     flex-direction: column;
@@ -47,8 +49,12 @@
     .gap-block p {
         max-width: 570px;
         margin: 0 auto 22px;
+        font-size: 1em;
     }
     .gap-block b, .gap-block__play h2 {
         font-size: 1.13em;
+    }
+    .gap-block__play {
+        padding: 30px 0 10px;
     }
 }

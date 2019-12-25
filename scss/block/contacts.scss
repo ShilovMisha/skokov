@@ -5,7 +5,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: relative;
+    position: relative; 
+}
+.contact-details__thanks, .contact-details__container, .contact-form form {
+   @include text-stroke(black);
 }
 .contact-details {
     width: 43%;
@@ -45,6 +48,7 @@
             top: 0;
             background-repeat: no-repeat;
             background-position: center;
+            background-size: 30px 30px;
         }
     }
 }
@@ -57,7 +61,17 @@
 .contact-details__email:before {
     background-image: url('../img/message.png');
 }
-
+@media (min-resolution: $retina-dpi) and (min-resolution: $retina-dppx) {
+    .contact-details__where:before {
+        background-image: url('../img/pin@2x.png');
+    }
+    .contact-details__phone:before {
+        background-image: url('../img/phone@2x.png');
+    }
+    .contact-details__email:before {
+        background-image: url('../img/message@2x.png');
+    }
+}
 .contact-form {
     padding-right: 53px;
     width: 42%;
@@ -107,5 +121,31 @@
 @media (max-width: $desktop-width) {
     .contact-form {
         padding-right: 0;
+    }
+ }
+
+ @media (max-width: $tablet-width) {
+    .contacts {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .contact-details__title {
+        margin-bottom: 22px;
+    }
+    .contact-details__container {
+        padding-top: 25px;
+    }
+    .contact-details, .contact-form {
+        width: 100%;
+        max-width: 530px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact-form__title {
+        margin-bottom: 10px;
+    }
+    .contact-form__submit {
+        width: 100%;
+        margin-top: 22px;
     }
  }

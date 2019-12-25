@@ -162,7 +162,7 @@ gulp.task("serve", ["style"], function(){
 		ui: false
 	});
 	gulp.watch(path.watch.style, ["style"]);
-
+	gulp.watch([path.watch.js], ["js:build"]);
 	gulp.watch(path.watch.html).on("change", reload);
 });
 
