@@ -8,12 +8,14 @@ var autoprefixer = require("autoprefixer");
 var del = require("del");
 var rename = require("gulp-rename");
 var csso = require("gulp-csso");
+var gmq = require('gulp-group-css-media-queries');
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var svgstore = require("gulp-svgstore");
 var webp = require("gulp-webp");
 var imagemin = require("gulp-imagemin");
 var imageminSvgo = require("imagemin-svgo");
+var mozjpeg = require('imagemin-mozjpeg');
 var sequence = require("run-sequence");
 
 var browserSync = require('browser-sync').create();
@@ -55,8 +57,9 @@ gulp.task("images", function(){
 	.pipe(imagemin([
 		imagemin.optipng({optimizationLevel: 3}),
 		imagemin.jpegtran({progressive: true}),
-		imagemin.svgo()
-		]))
+		imagemin.svgo(),
+		mozjpeg({quality: 80})
+	]))
 	.pipe(gulp.dest("img/optimized"));
 });
 
@@ -83,7 +86,10 @@ gulp.task("style", function(){
 		.pipe(plumber())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(postcss([autoprefixer({grid: true})]))
-		.pipe(csso())
+		.pipe(gmq())
+		.pipe(csso({
+			comments: false
+		}))
 		.pipe(gulp.dest("css"))
 		.pipe(reload({stream: true}));
 });
@@ -91,7 +97,7 @@ gulp.task("style", function(){
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш style.less
         .pipe(plumber())
-		.pipe(less())
+		.pipe(sass().on('error', sass.logError))
 		.pipe(postcss([autoprefixer({grid: true})]))
 		.pipe(csso())
         .pipe(gulp.dest(path.build.css)) //И в build
@@ -114,7 +120,7 @@ gulp.task('js:build', function () {
         .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 gulp.task('image:build', function () {
-    return gulp.src("path.src.img") //Выберем наши картинки
+    return gulp.src(path.src.img) //Выберем наши картинки
 	.pipe(imagemin([
 		imagemin.optipng({optimizationLevel: 3}),
 		imagemin.jpegtran({progressive: true}),

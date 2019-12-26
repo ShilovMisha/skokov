@@ -48,8 +48,6 @@
     width: 47%;
 }
 .about-us__our-clients {
-    // display: flex;
-    // flex-direction: column;
     h3 {
         margin-bottom: 33px;
     }
@@ -63,8 +61,6 @@
         margin: -6px;
     }
     li {
-        // width: 31.21%;
-        // height: 31.21%;
         width: 185px;
         margin: 3px;
         a+a {
@@ -75,7 +71,6 @@
         display: block;
     }
 }
-
 .about-us__our-team {
     padding-top: 5px;
     width: 100%;
@@ -92,15 +87,15 @@
         position: relative;
         overflow: hidden;
         picture {
-            min-width: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
         }
         img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
+            display: block;
             width: auto;
-            
             height: 100%;
         }
     }
@@ -108,6 +103,7 @@
 .our-team__item-container {
     display: flex;
     flex-direction: column;
+    min-height: 100%;
     background-color: $color-pink;
     padding: 9px 19px 16px;
     opacity: 0;
@@ -150,8 +146,6 @@
 
 @media (max-width: $desktop-width) {
     .about-us__our-clients-slider li {
-        // width: 34.21%;
-        // height: 34.21%;
          width: 145px;
     }
     .about-us__our-clients-slider ul {

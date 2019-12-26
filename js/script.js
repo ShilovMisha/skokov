@@ -112,224 +112,6 @@ $(document).ready(function () {
 
 });
 
-// //animate
-// var button = document.querySelector('.main-nav__toggle');
-// var modal = document.querySelector('.main-nav__list');
-// var $modal = $('.main-nav__list');
-// var menuItem = modal.querySelectorAll('.main-nav__item');
-// var $menuItems = $('.main-nav__item');
-// button.addEventListener('click', function(){
-	
-// 	if (button.classList.contains("main-nav__toggle--open")) {
-
-// 		 $modal.css({'animation-direction' : 'initial', 'display':'flex'});
-// 		button.style = "font-weight: normal;"
-// 		$modal.addClass('animated fadeInDown faster');
-// 		$menuItems.addClass('animated flipInY faster');
-				
-// 	} else {
-
-// 		$modal.css({'animation-direction' : 'reverse', 'display':'flex'});
-// 		button.style = "font-weight: bold;"
-// 		$modal.addClass('animated fadeInDown faster');
-// 	}
-	
-// });
-
-// $modal.on("animationend transitionend webkitAnimationEnd oanimationend MSAnimationEnd webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd", function(){
-// 	$modal.removeClass('animated fadeInDown faster fadeInUp');
-// 	$menuItems.removeClass('animated flipInY faster');
-// 	if (button.classList.contains("main-nav__toggle--open")) {
-// 	} else {
-
-// 	$modal.css({'display' : 'none'});
-// 	}});
-
-
-
-
-// var ssss = function(){return ((i*2 + 1)/100 + (2/10)) + "s;"}
-
-// for (var i=0; i < $menuItems.length; i++) {
-// 	$menuItems[i].style = "animation-delay:" + ((i*2 + 1)/100 + (2/10)) + "s;"
-// }
-
-
-
-
-
-//wow ourteam item delay
-// var item = document.querySelectorAll('.our-team__item');
-
-// for (var i = 0; i < item.length; i++) {
-// 	item[i].querySelector('.our-team__avatar-wrapper').setAttribute('data-wow-delay', (i + 1)/10 + "s;");
-// }
-//all title wow
-
-// var titles = document.querySelectorAll('[class*=title]');
-// for (var i = 0; i < titles.length; i++ ){
-// 	titles[i].classList.add('wow', 'pulse');
-// }
-
-
-// price list events 
-// var list = document.querySelector(".subscription__price-list");
-// var items = list.children;
-
-// var additional = document.querySelector(".subscription__additional");
-
-// var priceItemOnClick = function(evt){
-	
-
-
-// 	var curElem = list.querySelector('.subscription__price-item--current');
-// 	if ([].slice.call(items).indexOf(this) > 1) {
-// 		// list.insertBefore(this, curElem);
-// 		list.appendChild(list.replaceChild(this, curElem));
-// 		for (var i = 0; i < items.length; i++) {
-// 			items[i].classList.remove('subscription__price-item--current');
-
-
-// 			items[i].style.cssText = "animation-name: fadeIn; animation-duration: 0.5s !important;";
-
-// 			//additional.classList.remove('wow','fadeInUp');
-// 			$(additional).removeClass('wow fadeInUp');
-// 			additional.style.cssText = "animation-name: fadeIn; animation-duration: 0.5s !important;";
-
-// 		}
-// 		this.classList.add('subscription__price-item--current');
-// 	}
-// 	if ([].slice.call(items).indexOf(this) < 1) {
-// 		list.insertBefore(list.replaceChild(this, curElem), this);
-// 		for (var i = 0; i < items.length; i++) {
-// 			items[i].classList.remove('subscription__price-item--current');
-// 			items[i].style.cssText = "animation-name: fadeIn; animation-duration: 0.5s !important;";
-
-// 			//additional.classList.remove('wow','fadeInUp');
-// 			$(additional).removeClass('wow fadeInUp');
-// 			additional.style.cssText = "animation-name: fadeIn; animation-duration: 0.5s !important;";
-// 		}
-// 		this.classList.add('subscription__price-item--current');
-// 	}
-
-// }
-// additional.addEventListener('animationend', function(){
-// 	additional.setAttribute('style','');
-// })
-// $(additional).on("animationend transitionend webkitAnimationEnd oanimationend MSAnimationEnd webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd", function(){
-// 			additional.setAttribute('style','');
-// 	});
-// for (var i=0; i < items.length; i++) {
-// 	items[i].addEventListener('click', priceItemOnClick);
-// }
-
-//change count subscription__duration-list
-// var durList = document.querySelector('.subscription__duration-list');
-// var durLinks = durList.querySelectorAll('.subscription__duration-link');
-
-// var durOnClick = function(evt){
-// 	evt.preventDefault();
-// 	for (var i=0; i < durLinks.length; i++) {
-// 		durLinks[i].classList.remove('subscription__duration-link--current');
-// 	}
-// 	this.classList.add('subscription__duration-link--current');
-// }
-// for (var i = 0; i < durLinks.length; i++) {
-// 	durLinks[i].addEventListener('click', durOnClick);
-// }
-
-
-//slider
-
-// var sliderModule = function(list, items, btnGrp, btnNext, btnPrevious, smBlockItemCount){
-// 	var ourList = document.querySelector(list);
-// 	var ourItems = ourList.querySelectorAll(items);;
-
-// 	var btnGroup = document.querySelector(btnGrp);
-// 	var nextButton = document.querySelector(btnNext);
-// 	var previousButton = document.querySelector(btnPrevious);
-
-
-
-// 	var checkBtnAttr = function(evt){
-// 		if ((window.getComputedStyle(document.body, ':after').getPropertyValue('content') == '"sm"') || 
-// 			(window.getComputedStyle(document.body, ':after').getPropertyValue('content') == '"lg"')){
-				
-// 				for (var i = 0; i < ourItems.length; i++) {
-// 				if (ourItems[i] == ourList.querySelector(items + '--current')) {
-// 					if ((i + smBlockItemCount) >= ourItems.length) {
-// 						nextButton.setAttribute('disabled', '');
-// 					} else nextButton.removeAttribute('disabled', '');
-// 				}
-// 			}
-// 		} else {
-// 			if (ourList.querySelector(items +  ':last-of-type') === ourList.querySelector(items + '--current')){
-			
-// 				nextButton.setAttribute('disabled', '');
-// 			} else nextButton.removeAttribute('disabled', '');
-// 		}
-		
-
-// 		if (ourList.querySelector(items +  ':first-of-type') === ourList.querySelector(items + '--current')){
-			
-// 			previousButton.setAttribute('disabled', '');
-// 		} else previousButton.removeAttribute('disabled', '');
-
-
-		
-// 	};
-// 	var onClickNext = function(){
-
-// 		if (ourList.querySelector(items +  ':last-of-type') !== ourList.querySelector(items + '--current')) {
-			
-// 			for (var i = 0; i < ourItems.length; i++) {
-
-// 				if (ourItems[i].classList.contains(items.slice(1) + '--current')) {
-// 					ourItems[i + 1].classList.add(items.slice(1) + '--current');
-// 					ourItems[i].classList.remove(items.slice(1) + '--current');
-// 					break;
-// 				}
-				
-// 			}
-			
-// 		}
-// 	}
-// 	var onClickPrevious = function(){
-// 		if (ourList.querySelector(items +  ':first-of-type') !== ourList.querySelector(items + '--current')) {
-// 			for (var i = 0; i < ourItems.length; i++) {
-
-// 				if (ourItems[i].classList.contains(items.slice(1) + '--current')) {
-// 					ourItems[i - 1].classList.add(items.slice(1) + '--current');
-// 					ourItems[i].classList.remove(items.slice(1) + '--current');
-// 					break;
-// 				}
-				
-// 			}
-			
-// 		}
-// 	}
-// 	btnGroup.addEventListener('click', checkBtnAttr);
-// 	nextButton.addEventListener('click', onClickNext);
-// 	previousButton.addEventListener('click', onClickPrevious);
-// }
-// sliderModule('.reviews__list','.reviews__item','.reviews__slider-controls','.reviews__slider-button--next','.reviews__slider-button--previous', 2);
-// sliderModule('.our-team__list','.our-team__item','.our-team__slider-controls','.our-team__slider-button--next','.our-team__slider-button--previous', 3);
-// /////////////////////////////////////////////////////////////
-// //no-grid fallback
-
-// if (document.querySelector('.no-cssgrid')) {
-// 	var noGridContainer = document.querySelector('.trends__no-grid');
-// 	var itemsGrid = document.querySelector('.trends-item:first-child').children;
-// 	for (var i = 0; itemsGrid[i]; i++){
-// 		noGridContainer.appendChild(itemsGrid[i].cloneNode(true));
-	
-// 	}
-	
-// }
-
-
-
-
 //slow anchor
 var $page = $('html, body');
 $('a[href^="#"]:not([href="#"])').click(function() {
@@ -340,63 +122,12 @@ $('a[href^="#"]:not([href="#"])').click(function() {
 });
 
 
+//link only #
+var $misLinks = $('[href="#"]');
 
-// //all links and buttons hover wow
-// var link = document.querySelectorAll('.hoverEffect a, .hoverEffect button');
-// var funcs = function(evt){
-// 	$(this).addClass('animated pulse faster');
-// 	this.style = "animation-duration: 0.2s"
-// 	$(this).on("animationend transitionend webkitAnimationEnd oanimationend MSAnimationEnd webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd", function(){
-// 			$(this).removeClass('animated pulse faster');
-// 	});
-// 	// 
-// }
-// for (var i=0; i < link.length; i++) {
-	
-// 	link[i].addEventListener('mouseover', funcs);
-	
-// }
-// ////////////////////////////////////////////////////////////
-// //progress bar scroll
-// window.onscroll = function() {myFunction()};
-
-// function myFunction() {
-//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-//   var scrolled = (winScroll / height) * 100;
-//   document.getElementById("myBar").style.width = scrolled + "%";
-// }
-// //to top scroll
-// $(function() {
- 
-// 	$(window).scroll(function() {
-	 
-// 	if($(this).scrollTop() != 0) {
-	 
-// 	$('#toTop').fadeIn();
-	 
-// 	} else {
-	 
-// 	$('#toTop').fadeOut();
-	 
-// 	}
-	 
-// 	});
-	 
-// 	$('#toTop').click(function() {
-	 
-// 	$('body,html').animate({scrollTop:0},400);
-	 
-// 	});
-	 
-// 	});
-// //
-// //link only #
-// var $misLinks = $('[href="#"]');
-
-// $('a[href="#"]').click(function(evt) {
-// 	evt.preventDefault();
-// })
+$('a[href="#"]').click(function(evt) {
+	evt.preventDefault();
+})
 
 
 //validation
@@ -414,11 +145,6 @@ var validator =  new FormValidator('example_form', [{
   display: 'Message',
   rules: 'required'
 }], function(errors, evt) {
-
-    /*
-     * DO NOT COPY AND PASTE THIS CALLBACK. THIS IS CONFIGURED TO WORK ON THE DOCUMENTATION PAGE ONLY.
-     * YOU MUST CUSTOMIZE YOUR CALLBACK TO WORK UNDER YOUR ENVIRONMENT.
-     */
 
     var SELECTOR_ERRORS = $('.error_box'),
         SELECTOR_SUCCESS = $('.success_box');
@@ -472,24 +198,22 @@ for (var i = 0; i < noscript.length; i++){
 		var tempSource = tempPicture.querySelectorAll('source');
 	if (tempSource) {
 		for (var j = 0; j < tempSource.length; j++){
-			// tempSource[j].dataset.srcset = tempSource[j].srcset;	
 			tempSource[j].dataset.srcset = tempSource[j].getAttribute('srcset');
 			tempSource[j].removeAttribute('srcset');
 		}
 	}
 	var tempImage = tempPicture.querySelector('img');
-	// tempImage.dataset.srcset = tempImage.srcset;
-	tempImage.dataset.srcset = tempImage.getAttribute('srcset');
-	// tempImage.dataset.src = tempImage.src;
+  if(tempImage.getAttribute('srcset')) {
+    tempImage.dataset.srcset = tempImage.getAttribute('srcset');
+  }
+	
 	tempImage.dataset.src = tempImage.getAttribute('src');
 	tempImage.removeAttribute('srcset');
 	tempImage.removeAttribute('src');
-	if (tempPicture){
-		noscript[i].parentNode.insertBefore(tempPicture, noscript[i]);
+    if (tempPicture){
+      noscript[i].parentNode.insertBefore(tempPicture, noscript[i]);
+    }
 	}
-	}
-	// ieContainer.appendChild(tempElement);
-	
 }
 /////////////////////////////////////////////////////////////
 //ForEach для IE
